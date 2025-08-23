@@ -5,203 +5,225 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ramirez World Landscaping | Lawn, Concrete & CMU Fencing</title>
-  <meta name="description"
-    content="Ramirez World Landscaping provides expert lawn care, landscaping, concrete work, and CMU fencing. Serving the Tri-Cities with pride." />
-  <meta name="keywords"
-    content="landscaping, lawn maintenance, concrete patios, CMU fences, block walls, Ramirez World Landscaping, Tri-Cities" />
-  <meta name="author" content="Ramirez World Landscaping" />
-  <meta property="og:title" content="Ramirez World Landscaping | Lawn, Concrete & Fencing Experts" />
-  <meta property="og:description"
-    content="We specialize in lawn care, landscaping design, custom concrete work, and CMU fence installation." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourwebsite.com" />
-  <meta property="og:image" content="https://yourwebsite.com/images/landscaping-preview.png" />
-
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    /* simple fade gradient for hero readability */
+    .hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.45) 40%, rgba(0,0,0,.55) 100%); }
+    /* hide scrollbar on slider */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 </head>
 
-<body class="bg-light">
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-success px-4">
-    <span class="navbar-brand mb-0 h1">Ramirez World Landscaping</span>
-  </nav>
+<body class="bg-[#F5F2EB] text-[#2E2E2E]">
+  <!-- HERO with overlay nav (inspired by reference) -->
+  <header id="top" class="relative h-[92vh] min-h-[560px] w-full overflow-hidden rounded-b-[60px]">
+    <img src="images/hero-bg.png" alt="Showcase landscape" class="absolute inset-0 w-full h-full object-cover"/>
+    <div class="hero-overlay absolute inset-0"></div>
 
-  <!-- Hero + Services Wrapper -->
-  <section class="hero-services-wrapper text-white py-5">
-    <div class="container text-center pb-5">
-      <h1 class="display-5">Professional Landscaping & Hardscaping Services</h1>
-      <p class="lead">Lawn Maintenance · Custom Landscaping · Concrete Work · Fences & Gates</p>
-      <a href="#contact" class="btn btn-success mt-3">Request a Free Quote</a>
-      <a href="tel:1234567890" class="d-block mt-3 text-white fw-bold">
-        📞 Call us at (509) 302-5691
-      </a>
-
+    <!-- top bar: logo left, nav right -->
+    <div class="absolute top-0 left-0 right-0 z-20 px-6 md:px-10 py-6">
+      <div class="flex items-center justify-between">
+        <a href="#top" class="inline-flex items-center gap-3">
+          <img src="images/logo.webp" alt="Ramirez World Landscaping" class="h-24 md:h-28 drop-shadow-[0_6px_16px_rgba(0,0,0,0.45)]" />
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-white/90 font-semibold">
+          <a href="#top" class="hover:text-white">Home</a>
+          <a href="#services" class="hover:text-white">Services</a>
+          <a href="#work" class="hover:text-white">Gallery</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+        </nav>
+      </div>
     </div>
 
-    <div class="container">
-      <h2 class="text-center mb-4">Our Services</h2>
-      <div class="row text-center">
-        <div class="col-md-3 mb-4">
-          <div class="card h-100 bg-dark bg-opacity-75 text-white">
-            <div class="card-body">
-              <h5 class="card-title">Lawn Maintenance & Irrigation</h5>
-              <p class="card-text">Weekly mowing, edging, cleanups, and irrigation system installation to keep your yard
-                healthy and sharp.</p>
-            </div>
-          </div>
+    <!-- hero content -->
+    <div class="relative z-10 h-full flex items-center justify-center text-center px-6">
+      <div class="max-w-4xl">
+        <h1 class="text-white text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-[0_6px_16px_rgba(0,0,0,0.45)]" data-aos="fade-up">Commercial & Residential Landscaping</h1>
+        <p class="text-white/90 text-lg md:text-xl mt-5 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="120">We design, build, and maintain outdoor spaces—from weekly lawn care to custom concrete, rockscapes, fencing, and irrigation.</p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="220">
+          <a href="#contact" class="rounded-full bg-[#E1B94F] text-black font-semibold px-7 py-3 hover:bg-yellow-500">Request a Free Quote</a>
+          <a href="tel:5093025691" class="rounded-full border border-white/70 text-white px-7 py-3 hover:bg-white/10">📞 (509) 302-5691</a>
         </div>
-        <div class="col-md-3 mb-4">
-          <div class="card h-100 bg-dark bg-opacity-75 text-white">
-            <div class="card-body">
-              <h5 class="card-title">Landscaping</h5>
-              <p class="card-text">Custom designs with rock features, flower beds, mulch, and sod installation.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES SLIDER (image cards with overlay text) -->
+  <section id="services" class="py-14 md:py-16 bg-white" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">What We Do</h2>
+      <div class="relative">
+        <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2">
+          <!-- Card -->
+          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
+            <img src="images/lawn/lawn1.png" class="w-full h-full object-cover" alt="Lawn maintenance"/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+            <div class="absolute left-4 bottom-4 right-4 text-white">
+              <p class="text-xl font-semibold">Lawn Maintenance</p>
             </div>
-          </div>
+          </a>
+          <!-- Card -->
+          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
+            <img src="images/landscaping/landscaping2.png" class="w-full h-full object-cover" alt="Landscape design"/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+            <div class="absolute left-4 bottom-4 right-4 text-white">
+              <p class="text-xl font-semibold">Landscape Design</p>
+            </div>
+          </a>
+          <!-- Card -->
+          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
+            <img src="images/concrete/concrete3.png" class="w-full h-full object-cover" alt="Concrete patios"/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+            <div class="absolute left-4 bottom-4 right-4 text-white">
+              <p class="text-xl font-semibold">Concrete & Patios</p>
+            </div>
+          </a>
+          <!-- Card -->
+          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
+            <img src="images/fences/fence2.png" class="w-full h-full object-cover" alt="Fences & Gates"/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+            <div class="absolute left-4 bottom-4 right-4 text-white">
+              <p class="text-xl font-semibold">Fences & Gates</p>
+            </div>
+          </a>
+          <!-- Card -->
+          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
+            <img src="images/lawn/lawn5.png" class="w-full h-full object-cover" alt="Irrigation"/>
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
+            <div class="absolute left-4 bottom-4 right-4 text-white">
+              <p class="text-xl font-semibold">Irrigation</p>
+            </div>
+          </a>
         </div>
-        <div class="col-md-3 mb-4">
-          <div class="card h-100 bg-dark bg-opacity-75 text-white">
-            <div class="card-body">
-              <h5 class="card-title">Concrete</h5>
-              <p class="card-text">Patios, walkways, and driveways poured with precision and durability.</p>
-            </div>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAGGERED FEATURE SECTIONS (image/text alternating) -->
+  <section id="work" class="bg-white py-10 md:py-16">
+    <div class="max-w-7xl mx-auto space-y-16 md:space-y-24">
+      <!-- Row 1 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
+        <img src="images/landscaping/landscaping4.png" alt="Private Construction" class="rounded-2xl shadow-md order-1 md:order-none"/>
+        <div>
+          <h3 class="text-4xl font-extrabold mb-4">Beautiful Landscape Installs</h3>
+          <p class="text-lg text-[#4b4b4b] mb-6">From premium sod and mulch to rock features and plantings, our installs elevate curb appeal and create outdoor spaces that last.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Get a landscape quote <span>→</span></a>
         </div>
-        <div class="col-md-3 mb-4">
-          <div class="card h-100 bg-dark bg-opacity-75 text-white">
-            <div class="card-body">
-              <h5 class="card-title">Fences & Gates</h5>
-              <p class="card-text">Expert installation of wood, vinyl, chain-link, and CMU fences, along with custom
-                gates for added security and curb appeal.</p>
-            </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
+        <div class="order-2 md:order-none">
+          <h3 class="text-4xl font-extrabold mb-4">Concrete Patios & Walkways</h3>
+          <p class="text-lg text-[#4b4b4b] mb-6">Stamped, broom, or exposed—our crew pours durable concrete that ties your yard together and stands up to the seasons.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Talk concrete options <span>→</span></a>
+        </div>
+        <img src="images/concrete/concrete1.png" alt="Concrete" class="rounded-2xl shadow-md order-1 md:order-none"/>
+      </div>
+      <!-- Row 3 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
+        <img src="images/fences/fence3.png" alt="Fencing" class="rounded-2xl shadow-md order-1 md:order-none"/>
+        <div>
+          <h3 class="text-4xl font-extrabold mb-4">Fences, Gates & CMU Walls</h3>
+          <p class="text-lg text-[#4b4b4b] mb-6">Add privacy and security with wood, vinyl, chain-link, or block walls—installed neatly and built to code.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Book a fencing estimate <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA STRIP -->
+  <section class="py-14 bg-[#3A7D44] text-white text-center" data-aos="fade-up">
+    <h3 class="text-3xl md:text-4xl font-extrabold">Ready to transform your outdoor space?</h3>
+    <p class="mt-2 text-white/90">Fast quotes • Licensed & insured • Local crew</p>
+    <div class="mt-6 flex items-center justify-center gap-4">
+      <a href="#contact" class="rounded-full bg-[#E1B94F] text-black font-semibold px-7 py-3 hover:bg-yellow-500">Get a Free Quote</a>
+      <a href="tel:5093025691" class="rounded-full border border-white/80 text-white px-7 py-3 hover:bg-white/10">Call (509) 302-5691</a>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM / FOOTER -->
+  <section id="contact" class="py-16 bg-[#F5F2EB]" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6">
+      <div>
+        <h4 class="text-3xl font-bold mb-4">Get in touch</h4>
+        <p class="text-[#4b4b4b] mb-6">Tell us about your project and we’ll get back to you within 24 hours.</p>
+        <form action="https://formsubmit.co/ramirezworldlandscaping22@gmail.com" method="POST" class="space-y-4">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full border border-gray-300 p-3 rounded-lg"/>
+          <input type="email" name="email" placeholder="Email Address" required class="w-full border border-gray-300 p-3 rounded-lg"/>
+          <input type="tel" name="phone" placeholder="Phone (optional)" class="w-full border border-gray-300 p-3 rounded-lg"/>
+          <textarea name="message" rows="4" placeholder="How can we help?" required class="w-full border border-gray-300 p-3 rounded-lg"></textarea>
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="/thank-you.html">
+          <input type="text" name="_honey" style="display:none">
+          <button type="submit" class="w-full md:w-auto rounded-full bg-[#3A7D44] text-white px-7 py-3 hover:bg-green-700">Send Message</button>
+        </form>
+      </div>
+      <!-- Map / Details -->
+      <div class="space-y-6">
+        <div class="rounded-2xl overflow-hidden shadow">
+          <iframe class="w-full h-64 md:h-full" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d-119.2!3d46.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sTri-Cities!5e0!3m2!1sen!2sus!4v000000000"></iframe>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+          <div>
+            <p class="font-semibold">Email</p>
+            <p>ramirezworldlandscaping22@gmail.com</p>
+          </div>
+          <div>
+            <!-- <p class="font-semibold">Phone</p>
+            <p>(509) 302-5691</p> -->
+          </div>
+          <div>
+            <p class="font-semibold">Service Area</p>
+            <p>Tri-Cities & nearby</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-<section class="container py-5">
-  <h2 class="text-center mb-5">Our Work</h2>
-
-  <!-- Lawn Maintenance & Irrigation -->
-  <div class="row align-items-center mb-5">
-    <div class="col-md-6">
-      <h3>Lawn Maintenance & Irrigation</h3>
-      <p>Weekly mowing, edging, cleanups, and irrigation system installation to keep your yard healthy and sharp.</p>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-2">
-        <div class="col-6"><img src="images/lawn/lawn1.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/lawn/lawn2.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/lawn/lawn3.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/lawn/lawn4.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/lawn/lawn5.png" class="img-fluid rounded shadow"></div>
+  <footer class="bg-[#262421] text-white py-14">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="images/logo.webp" class="h-14 mb-4" alt="RWL"/>
+        
+      </div>
+      <div>
+        <h5 class="font-semibold mb-3">Navigate</h5>
+        <ul class="space-y-2 text-white/80 text-sm">
+          <li><a href="#top" class="hover:text-white">Home</a></li>
+          <li><a href="#services" class="hover:text-white">Services</a></li>
+          <li><a href="#work" class="hover:text-white">Gallery</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-3">Contact</h5>
+        <ul class="space-y-2 text-white/80 text-sm">
+          <li>ramirezworldlandscaping22@gmail.com</li>
+          <li>(509) 302-5691</li>
+          <li>Tri-Cities, WA</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold mb-3">Follow</h5>
+        <div class="flex gap-3 text-white/80 text-xl">
+          <a href="#" aria-label="Facebook">★</a>
+          <a href="#" aria-label="Instagram">★</a>
+          <a href="#" aria-label="LinkedIn">★</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Landscaping -->
-  <div class="row align-items-center mb-5 flex-md-row-reverse">
-    <div class="col-md-6">
-      <h3>Landscaping</h3>
-      <p>Custom designs with rock features, flower beds, mulch, and sod installation.</p>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-2">
-        <div class="col-6"><img src="images/landscaping/landscaping1.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/landscaping/landscaping2.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/landscaping/landscaping3.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/landscaping/landscaping4.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/landscaping/landscaping5.png" class="img-fluid rounded shadow"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Concrete -->
-  <div class="row align-items-center mb-5">
-    <div class="col-md-6">
-      <h3>Concrete</h3>
-      <p>Patios, walkways, and driveways poured with precision and durability.</p>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-2">
-        <div class="col-6"><img src="images/concrete/concrete1.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/concrete/concrete2.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/concrete/concrete3.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/concrete/concrete4.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/concrete/concrete5.png" class="img-fluid rounded shadow"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CMU Fencing -->
-  <div class="row align-items-center mb-5 flex-md-row-reverse">
-    <div class="col-md-6">
-      <h3>CMU Fencing</h3>
-      <p>Expert installation of wood, vinyl, chain-link, and CMU fences, along with custom gates for added security and curb appeal.</p>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-2">
-        <div class="col-6"><img src="images/fences/fence1.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/fences/fence2.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/fences/fence3.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/fences/fence4.png" class="img-fluid rounded shadow"></div>
-        <div class="col-6"><img src="images/fences/fence5.png" class="img-fluid rounded shadow"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Contact -->
-  <section id="contact" class="container py-5">
-    <h2 class="text-center mb-4">Contact Us</h2>
-    <form action="https://formsubmit.co/ramirezworldlandscaping22@gmail.com" method="POST">
-      <div class="mb-3">
-        <label for="name" class="form-label">Your Name</label>
-        <input type="text" class="form-control" name="name" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" name="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Your Message</label>
-        <textarea class="form-control" name="message" rows="4" required></textarea>
-      </div>
-
-      <!-- Optional hidden inputs -->
-      <input type="hidden" name="_captcha" value="true">
-      <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
-      <input type="text" name="_honey" style="display:none">
-      <!-- Production redirect -->
-      <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
-
-
-      <button type="submit" class="btn btn-success">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-success text-white text-center py-3">
-    &copy; 2025 Ramirez World Landscaping LLC. All rights reserved.
+    <div class="max-w-7xl mx-auto px-6 mt-10 text-white/60 text-xs">© 2025 Ramirez World Landscaping LLC. All rights reserved.</div>
   </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
+  <script>
+    AOS.init({ once: true, duration: 650, easing: 'ease-out' });
+  </script>
+</body>
 </html>
