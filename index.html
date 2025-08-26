@@ -11,30 +11,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
-    /* simple fade gradient for hero readability */
     .hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.45) 40%, rgba(0,0,0,.55) 100%); }
-    /* hide scrollbar on slider */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 
 <body class="bg-[#F5F2EB] text-[#2E2E2E]">
-  <!-- HERO with overlay nav (inspired by reference) -->
+  <!-- HERO with overlay nav -->
   <header id="top" class="relative h-[92vh] min-h-[560px] w-full overflow-hidden rounded-b-[60px]">
     <img src="images/hero-bg.png" alt="Showcase landscape" class="absolute inset-0 w-full h-full object-cover"/>
     <div class="hero-overlay absolute inset-0"></div>
 
-    <!-- top bar: logo left, nav right -->
+    <!-- top bar: circular logo left, nav right -->
     <div class="absolute top-0 left-0 right-0 z-20 px-6 md:px-10 py-6">
       <div class="flex items-center justify-between">
         <a href="#top" class="inline-flex items-center gap-3">
-          <img src="images/logo.webp" alt="Ramirez World Landscaping" class="h-24 md:h-28 drop-shadow-[0_6px_16px_rgba(0,0,0,0.45)]" />
+          <div class="h-24 w-24 md:h-28 md:w-28 rounded-full overflow-hidden ring-4 ring-white/70 shadow-[0_6px_18px_rgba(0,0,0,0.45)]">
+            <img src="images/logo.webp" alt="Ramirez World Landscaping" class="h-full w-full object-cover"/>
+          </div>
         </a>
         <nav class="hidden md:flex items-center gap-8 text-white/90 font-semibold">
           <a href="#top" class="hover:text-white">Home</a>
           <a href="#services" class="hover:text-white">Services</a>
-          <a href="#work" class="hover:text-white">Gallery</a>
+          <a href="#gallery" class="hover:text-white">Gallery</a>
           <a href="#contact" class="hover:text-white">Contact</a>
         </nav>
       </div>
@@ -44,7 +44,7 @@
     <div class="relative z-10 h-full flex items-center justify-center text-center px-6">
       <div class="max-w-4xl">
         <h1 class="text-white text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-[0_6px_16px_rgba(0,0,0,0.45)]" data-aos="fade-up">Commercial & Residential Landscaping</h1>
-        <p class="text-white/90 text-lg md:text-xl mt-5 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="120">We design, build, and maintain outdoor spaces—from weekly lawn care to custom concrete, rockscapes, fencing, and irrigation.</p>
+        <p class="text-white/90 text-lg md:text-xl mt-5 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="120">We design, build, and maintain outdoor spaces—from lawn care to concrete, fencing, irrigation, and more.</p>
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="220">
           <a href="#contact" class="rounded-full bg-[#E1B94F] text-black font-semibold px-7 py-3 hover:bg-yellow-500">Request a Free Quote</a>
           <a href="tel:5093025691" class="rounded-full border border-white/70 text-white px-7 py-3 hover:bg-white/10">📞 (509) 302-5691</a>
@@ -53,85 +53,163 @@
     </div>
   </header>
 
-  <!-- SERVICES SLIDER (image cards with overlay text) -->
-  <section id="services" class="py-14 md:py-16 bg-white" data-aos="fade-up">
+<!-- EXPANDED SERVICES GRID (larger boxes) -->
+<section id="services" class="py-20 bg-white" data-aos="fade-up">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-14">What We Do</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card -->
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/lawn/lawn1.png" alt="Lawn Maintenance" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Lawn Maintenance</h3>
+</div>
+</div>
+<!-- Card -->
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/landscaping/landscaping2.png" alt="Landscape Design" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Landscape Design</h3>
+</div>
+</div>
+<!-- Card -->
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/concrete/concrete3.png" alt="Concrete & Patios" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Concrete & Patios</h3>
+</div>
+</div>
+<!-- Card -->
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/fences/fence2.png" alt="Fences & CMU Walls" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Fences & CMU Walls</h3>
+</div>
+</div>
+<!-- New Services -->
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/misc/construction.jpg" alt="General Construction" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">General Construction</h3>
+</div>
+</div>
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/misc/roofing.jpg" alt="Roofing" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Roofing</h3>
+</div>
+</div>
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/misc/cleaning.jpg" alt="Cleaning" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Cleaning</h3>
+</div>
+</div>
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/misc/trimming.jpg" alt="Trimming" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Trimming</h3>
+</div>
+</div>
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
+<img src="images/misc/painting.jpg" alt="Painting" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform" />
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h3 class="text-2xl font-semibold">Painting</h3>
+</div>
+</div>
+</section>
+
+  <!-- AUTO-ROTATING GALLERY CAROUSEL -->
+  <section id="gallery" class="py-14 md:py-16 bg-white" data-aos="fade-up">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">What We Do</h2>
-      <div class="relative">
-        <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2">
-          <!-- Card -->
-          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
-            <img src="images/lawn/lawn1.png" class="w-full h-full object-cover" alt="Lawn maintenance"/>
-            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
-            <div class="absolute left-4 bottom-4 right-4 text-white">
-              <p class="text-xl font-semibold">Lawn Maintenance</p>
-            </div>
-          </a>
-          <!-- Card -->
-          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
-            <img src="images/landscaping/landscaping2.png" class="w-full h-full object-cover" alt="Landscape design"/>
-            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
-            <div class="absolute left-4 bottom-4 right-4 text-white">
-              <p class="text-xl font-semibold">Landscape Design</p>
-            </div>
-          </a>
-          <!-- Card -->
-          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
-            <img src="images/concrete/concrete3.png" class="w-full h-full object-cover" alt="Concrete patios"/>
-            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
-            <div class="absolute left-4 bottom-4 right-4 text-white">
-              <p class="text-xl font-semibold">Concrete & Patios</p>
-            </div>
-          </a>
-          <!-- Card -->
-          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
-            <img src="images/fences/fence2.png" class="w-full h-full object-cover" alt="Fences & Gates"/>
-            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
-            <div class="absolute left-4 bottom-4 right-4 text-white">
-              <p class="text-xl font-semibold">Fences & Gates</p>
-            </div>
-          </a>
-          <!-- Card -->
-          <a href="#work" class="group relative w-[85%] sm:w-[48%] md:w-[30%] lg:w-[24%] aspect-[4/3] rounded-xl overflow-hidden snap-start">
-            <img src="images/lawn/lawn5.png" class="w-full h-full object-cover" alt="Irrigation"/>
-            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors"></div>
-            <div class="absolute left-4 bottom-4 right-4 text-white">
-              <p class="text-xl font-semibold">Irrigation</p>
-            </div>
-          </a>
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold">Project Gallery</h2>
+        <div class="flex items-center gap-3">
+          <button id="galPrev" aria-label="Previous" class="h-10 w-10 rounded-full bg-[#3A7D44] text-white grid place-items-center hover:bg-green-700">‹</button>
+          <button id="galNext" aria-label="Next" class="h-10 w-10 rounded-full bg-[#3A7D44] text-white grid place-items-center hover:bg-green-700">›</button>
+        </div>
+      </div>
+
+      <div id="galViewport" class="relative overflow-hidden rounded-2xl">
+        <div id="galTrack" class="flex transition-transform duration-500 ease-out">
+          <!-- Slides (replace images as needed) -->
+          <img src="images/landscaping/landscaping1.png" alt="Project 1" class="w-full shrink-0 object-cover aspect-[16/9]"/>
+          <img src="images/concrete/concrete2.png" alt="Project 2" class="w-full shrink-0 object-cover aspect-[16/9]"/>
+          <img src="images/fences/fence4.png" alt="Project 3" class="w-full shrink-0 object-cover aspect-[16/9]"/>
+          <img src="images/lawn/lawn4.png" alt="Project 4" class="w-full shrink-0 object-cover aspect-[16/9]"/>
+          <img src="images/landscaping/landscaping5.png" alt="Project 5" class="w-full shrink-0 object-cover aspect-[16/9]"/>
+        </div>
+        <!-- dots -->
+        <div id="galDots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"></div>
+      </div>
+      <!-- <p class="text-sm text-[#4b4b4b] mt-3">Swipe on mobile • Auto-advances • Use arrows to navigate</p> -->
+    </div>
+  </section>
+
+  <!-- STAGGERED FEATURE SECTIONS (kept for depth) -->
+  <section id="work" class="bg-white py-10 md:py-16">
+    <div class="max-w-7xl mx-auto space-y-16 md:space-y-24">
+      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
+        <img src="images/landscaping/landscaping4.png" alt="Landscape installs" class="rounded-2xl shadow-md order-1 md:order-none"/>
+        <div>
+          <h3 class="text-4xl font-extrabold mb-4">Beautiful Landscape Installs</h3>
+          <p class="text-lg text-[#4b4b4b] mb-6">Sod, mulch, rock features and plantings that elevate curb appeal and last.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Get a landscape quote →</a>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
+        <div class="order-2 md:order-none">
+          <h3 class="text-4xl font-extrabold mb-4">Concrete Patios & Walkways</h3>
+          <p class="text-lg text-[#4b4b4b] mb-6">Stamped, broom, or exposed—durable finishes that tie your yard together.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Talk concrete options →</a>
+        </div>
+        <img src="images/concrete/concrete1.png" alt="Concrete" class="rounded-2xl shadow-md order-1 md:order-none"/>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
+        <img src="images/fences/fence3.png" alt="Fencing" class="rounded-2xl shadow-md order-1 md:order-none"/>
+        <div>
+          <h3 class="text-4xl font-extrabold mb-4">Fences, Gates & CMU Walls</h3>
+          <p class="text-lg text-[#4b4b4b] mb-6">Privacy and security with wood, vinyl, chain-link, or block walls—built to code.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Book a fencing estimate →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STAGGERED FEATURE SECTIONS (image/text alternating) -->
-  <section id="work" class="bg-white py-10 md:py-16">
-    <div class="max-w-7xl mx-auto space-y-16 md:space-y-24">
-      <!-- Row 1 -->
-      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
-        <img src="images/landscaping/landscaping4.png" alt="Private Construction" class="rounded-2xl shadow-md order-1 md:order-none"/>
-        <div>
-          <h3 class="text-4xl font-extrabold mb-4">Beautiful Landscape Installs</h3>
-          <p class="text-lg text-[#4b4b4b] mb-6">From premium sod and mulch to rock features and plantings, our installs elevate curb appeal and create outdoor spaces that last.</p>
-          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Get a landscape quote <span>→</span></a>
-        </div>
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-16 bg-white" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold">What Clients Say</h2>
+        <p class="text-[#4b4b4b] mt-2">Real reviews from homeowners and businesses we serve.</p>
       </div>
-      <!-- Row 2 -->
-      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
-        <div class="order-2 md:order-none">
-          <h3 class="text-4xl font-extrabold mb-4">Concrete Patios & Walkways</h3>
-          <p class="text-lg text-[#4b4b4b] mb-6">Stamped, broom, or exposed—our crew pours durable concrete that ties your yard together and stands up to the seasons.</p>
-          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Talk concrete options <span>→</span></a>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="rounded-2xl border border-gray-200 bg-[#F5F2EB] p-6 shadow-sm">
+          <div class="flex gap-1 text-[#E1B94F] mb-2">★★★★★</div>
+          <p class="italic">“They transformed our front yard in two days. Clean, fast, and friendly!”</p>
+          <p class="mt-4 font-semibold">— Marissa P.</p>
         </div>
-        <img src="images/concrete/concrete1.png" alt="Concrete" class="rounded-2xl shadow-md order-1 md:order-none"/>
-      </div>
-      <!-- Row 3 -->
-      <div class="grid md:grid-cols-2 gap-8 items-center px-6" data-aos="fade-up">
-        <img src="images/fences/fence3.png" alt="Fencing" class="rounded-2xl shadow-md order-1 md:order-none"/>
-        <div>
-          <h3 class="text-4xl font-extrabold mb-4">Fences, Gates & CMU Walls</h3>
-          <p class="text-lg text-[#4b4b4b] mb-6">Add privacy and security with wood, vinyl, chain-link, or block walls—installed neatly and built to code.</p>
-          <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-[#3A7D44] hover:underline">Book a fencing estimate <span>→</span></a>
+        <!-- Card 2 -->
+        <div class="rounded-2xl border border-gray-200 bg-[#F5F2EB] p-6 shadow-sm">
+          <div class="flex gap-1 text-[#E1B94F] mb-2">★★★★★</div>
+          <p class="italic">“Concrete patio looks amazing. The crew was on time and professional.”</p>
+          <p class="mt-4 font-semibold">— Daniel R.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-2xl border border-gray-200 bg-[#F5F2EB] p-6 shadow-sm">
+          <div class="flex gap-1 text-[#E1B94F] mb-2">★★★★★</div>
+          <p class="italic">“Great pricing and quality fencing. We’ll hire them again for roofing.”</p>
+          <p class="mt-4 font-semibold">— Lopez Family</p>
         </div>
       </div>
     </div>
@@ -139,7 +217,7 @@
 
   <!-- CONTACT CTA STRIP -->
   <section class="py-14 bg-[#3A7D44] text-white text-center" data-aos="fade-up">
-    <h3 class="text-3xl md:text-4xl font-extrabold">Ready to transform your outdoor space?</h3>
+    <h3 class="text-3xl md:text-4xl font-extrabold">Ready to transform your space?</h3>
     <p class="mt-2 text-white/90">Fast quotes • Licensed & insured • Local crew</p>
     <div class="mt-6 flex items-center justify-center gap-4">
       <a href="#contact" class="rounded-full bg-[#E1B94F] text-black font-semibold px-7 py-3 hover:bg-yellow-500">Get a Free Quote</a>
@@ -164,7 +242,6 @@
           <button type="submit" class="w-full md:w-auto rounded-full bg-[#3A7D44] text-white px-7 py-3 hover:bg-green-700">Send Message</button>
         </form>
       </div>
-      <!-- Map / Details -->
       <div class="space-y-6">
         <div class="rounded-2xl overflow-hidden shadow">
           <iframe class="w-full h-64 md:h-full" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d-119.2!3d46.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sTri-Cities!5e0!3m2!1sen!2sus!4v000000000"></iframe>
@@ -175,8 +252,8 @@
             <p>ramirezworldlandscaping22@gmail.com</p>
           </div>
           <div>
-            <!-- <p class="font-semibold">Phone</p>
-            <p>(509) 302-5691</p> -->
+            <p class="font-semibold">Phone</p>
+            <p>(509) 302-5691</p>
           </div>
           <div>
             <p class="font-semibold">Service Area</p>
@@ -190,15 +267,17 @@
   <footer class="bg-[#262421] text-white py-14">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
       <div>
-        <img src="images/logo.webp" class="h-14 mb-4" alt="RWL"/>
-        
+        <div class="h-14 w-14 rounded-full overflow-hidden ring-2 ring-white/70 mb-4">
+          <img src="images/logo.webp" class="h-full w-full object-cover" alt="RWL"/>
+        </div>
+        <p class="text-white/80 text-sm">Work hard • Stay humble</p>
       </div>
       <div>
         <h5 class="font-semibold mb-3">Navigate</h5>
         <ul class="space-y-2 text-white/80 text-sm">
           <li><a href="#top" class="hover:text-white">Home</a></li>
           <li><a href="#services" class="hover:text-white">Services</a></li>
-          <li><a href="#work" class="hover:text-white">Gallery</a></li>
+          <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
           <li><a href="#contact" class="hover:text-white">Contact</a></li>
         </ul>
       </div>
@@ -224,6 +303,69 @@
 
   <script>
     AOS.init({ once: true, duration: 650, easing: 'ease-out' });
+
+    // Simple gallery carousel logic (auto-rotate + arrows + swipe + dots)
+    const track = document.getElementById('galTrack');
+    const viewport = document.getElementById('galViewport');
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById('galPrev');
+    const nextBtn = document.getElementById('galNext');
+    const dotsWrap = document.getElementById('galDots');
+
+    let index = 0;
+    let intervalMs = 4000; // default, can be adjusted
+    let timer;
+
+    // create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'h-2.5 w-2.5 rounded-full ' + (i===0 ? 'bg-[#3A7D44]' : 'bg-gray-300');
+      dot.setAttribute('aria-label', `Go to slide ${i+1}`);
+      dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+      dotsWrap.appendChild(dot);
+    });
+
+    function updateDots() {
+      dotsWrap.querySelectorAll('button').forEach((d, i) => {
+        d.className = 'h-2.5 w-2.5 rounded-full ' + (i===index ? 'bg-[#3A7D44]' : 'bg-gray-300');
+      });
+    }
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    }
+
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+    nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+
+    // Auto-advance
+    function startAuto() { timer = setInterval(next, intervalMs); }
+    function stopAuto() { clearInterval(timer); }
+    function resetAuto() { stopAuto(); startAuto(); }
+
+    viewport.addEventListener('mouseenter', stopAuto);
+    viewport.addEventListener('mouseleave', startAuto);
+
+    // Swipe support
+    let startX = 0;
+    viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; stopAuto(); });
+    viewport.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      if (endX - startX > 50) prev();
+      if (startX - endX > 50) next();
+      startAuto();
+    });
+
+    startAuto();
+
+    // OPTIONAL: allow changing speed via data-attr on viewport
+    const speedAttr = viewport.getAttribute('data-speed');
+    if (speedAttr) { intervalMs = parseInt(speedAttr, 10) || intervalMs; resetAuto(); }
   </script>
 </body>
 </html>
